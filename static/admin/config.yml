@@ -8,7 +8,7 @@ public_folder: ../images
 collections:
   - name: "trivia"
     label: "Trivia"
-    folder: "content/trivia"
+    folder: "src/content/trivia"
     create: true
     editor:
       preview: false
@@ -16,4 +16,4 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Topic", name: "topic", widget: "string" }
-      - { label: "Trivia Body", name: "trivia", widget: "markdown" }
+      - { label: "Trivia Body", name: "body", widget: "markdown" }
