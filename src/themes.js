@@ -30,10 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      background-color: ${({ theme }) => {
-        console.log("theme.linkBg", theme)
-        return theme.linkBg
-      }};
+      background-color: ${({ theme }) => theme.linkBg};
       border-radius: .2rem;
       padding-left: .5rem;
       padding-right: .5rem;
