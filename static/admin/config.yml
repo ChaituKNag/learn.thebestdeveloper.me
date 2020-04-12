@@ -1,0 +1,19 @@
+backend:
+  name: github
+  branch: master
+  repo: ChaituKNag/learn.thebestdeveloper.me
+
+media_folder: src/images
+public_folder: ../images
+collections:
+  - name: "trivia"
+    label: "Trivia"
+    folder: "content/trivia"
+    create: true
+    editor:
+      preview: false
+    slug: "{{year}}-{{month}}-{{day}}__{{topic}}__{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Topic", name: "topic", widget: "string" }
+      - { label: "Trivia Body", name: "trivia", widget: "markdown" }
