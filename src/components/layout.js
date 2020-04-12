@@ -1,15 +1,15 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
+import { ThemeProvider } from "styled-components"
+import { lightTheme, GlobalStyle } from "../themes"
 
 const Layout = ({ children }) => {
-  return <Fragment>{children}</Fragment>
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  )
 }
 
 Layout.propTypes = {

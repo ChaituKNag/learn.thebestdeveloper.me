@@ -33,11 +33,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Oswald`,
-            subsets: [`latin`],
+            family: `Comic Neue`,
+            variants: [`400`, `700`],
           },
           {
-            family: `Open Sans`,
+            family: `Roboto`,
             variants: [`400`, `700`],
           },
         ],
