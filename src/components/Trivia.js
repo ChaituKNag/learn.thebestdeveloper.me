@@ -13,9 +13,9 @@ const Trivia = ({ data }) => {
   const [current, setCurrent] = useState()
   useEffect(() => {
     if (data) {
-      setCurrent(randomIndex(current, data.length))
+      setCurrent(c => randomIndex(c, data.length))
     }
-  }, [])
+  }, [data])
 
   const handleRandomTrivia = () => {
     setCurrent(randomIndex(current, data.length))
