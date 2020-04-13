@@ -41,12 +41,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Comic Neue`,
+            family: `Source Serif Pro`,
             variants: [`400`, `700`],
           },
           {
-            family: `Roboto`,
-            variants: [`400`, `700`],
+            family: `Ubuntu Condensed`,
+            variants: [`400`],
           },
         ],
       },

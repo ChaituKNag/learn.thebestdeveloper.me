@@ -5,7 +5,7 @@ export default styled.button`
   background-color: ${({ theme }) => theme.bgDark};
   color: ${({ theme }) => theme.bg};
   border-radius: 0.3rem;
-  border: none;
+  border: 4px solid ${({ theme }) => theme.borderColor};
   font-size: 1.2rem;
   cursor: pointer;
 `

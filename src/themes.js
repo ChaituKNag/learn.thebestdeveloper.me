@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         background-color: ${({ theme }) => theme.bg};
         color: ${({ theme }) => theme.text};
-        font-family: "Comic Neue";
+        font-family: "Ubuntu Condensed";
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.4;
@@ -25,8 +25,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6, h7 {
-      font-family: "Roboto";
+      font-family: "Source Serif Pro";
       color: ${({ theme }) => theme.textLight};
+      font-weight: 400;
     }
 
     a {
@@ -49,6 +50,7 @@ export const lightTheme = {
   text: "#12130f",
   textLight: "#31393c",
   bgDark: "#0f2c4b",
+  borderColor: "#76b4f7",
   linkBg: "#ffd3e8",
 }
 

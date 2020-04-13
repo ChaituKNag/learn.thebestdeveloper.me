@@ -15,7 +15,7 @@ const Trivia = ({ data }) => {
     if (data) {
       setCurrent(randomIndex(current, data.length))
     }
-  }, [data])
+  }, [])
 
   const handleRandomTrivia = () => {
     setCurrent(randomIndex(current, data.length))
