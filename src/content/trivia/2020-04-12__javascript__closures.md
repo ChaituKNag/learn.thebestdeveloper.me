@@ -17,4 +17,11 @@ function init() {
   displayName();
 }
 init();
+
 ```
+
+### Practical use-cases
+
+* Currying functions
+* Object oriented programming
+* Callbacks like *event handlers*
