@@ -48,6 +48,9 @@ export const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.textLight}
       }
     }
+    code[class*="language-"], pre[class*="language-"] {
+      font-size: 1rem;
+    }
 `
 
 // https://coolors.co/fbfcff-0f2c4b-12130f-31393c-ffd3e8
