@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Learn with Naga`,
+        short_name: `Learn TBD`,
         start_url: `/`,
         background_color: `#0f2c4b`,
         theme_color: `#0f2c4b`,
