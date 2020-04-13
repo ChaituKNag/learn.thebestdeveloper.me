@@ -1,11 +1,17 @@
 import { createGlobalStyle } from "styled-components"
 
+export const fonts = {
+  primary: "Ubuntu Condensed",
+  secondary: "Source Serif Pro",
+}
+
 export const GlobalStyle = createGlobalStyle`
     html,body {
         min-height: 100vh;
         background-color: ${({ theme }) => theme.bg};
         color: ${({ theme }) => theme.text};
-        font-family: "Ubuntu Condensed";
+        font-family: 
+        ${fonts.primary};
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.4;
@@ -25,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6, h7 {
-      font-family: "Source Serif Pro";
+      font-family: ${fonts.secondary};
       color: ${({ theme }) => theme.textLight};
       font-weight: 400;
     }

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { fonts } from "../../themes"
 
 export default styled.button`
   padding: 0.5rem 1rem;
@@ -8,4 +9,5 @@ export default styled.button`
   border: 4px solid ${({ theme }) => theme.borderColor};
   font-size: 1.2rem;
   cursor: pointer;
+  font-family: ${fonts.secondary};
 `
