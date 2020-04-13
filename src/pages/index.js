@@ -1,22 +1,14 @@
-import React from "react"
-
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-import { useStaticQuery, graphql } from "gatsby"
-import Trivia from "../components/Trivia"
+import { useStaticQuery, graphql, navigate } from "gatsby"
+import randomLink from "../utils/random-link"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query AllTrivia {
+    query AllTriviaIds {
       allMarkdownRemark {
         edges {
           node {
-            frontmatter {
-              topic
-              title
-            }
-            html
             id
           }
         }
@@ -24,12 +16,13 @@ const IndexPage = () => {
     }
   `)
 
-  return (
-    <Layout>
-      <SEO title="Trivia" />
-      <Trivia data={data.allMarkdownRemark.edges} />
-    </Layout>
-  )
+  useEffect(() => {
+    if (data.allMarkdownRemark.edges) {
+      let { node } = randomLink(data.allMarkdownRemark.edges)
+      navigate(`/${node.id}`, { replace: true })
+    }
+  }, [data])
+  return <Layout>Loading...</Layout>
 }
 
 export default IndexPage

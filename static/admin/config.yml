@@ -16,4 +16,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Topic", name: "topic", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", default: "{{slug}}" }
       - { label: "Trivia Body", name: "body", widget: "markdown" }
