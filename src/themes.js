@@ -12,12 +12,12 @@ export const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.text};
         font-family: 
         ${fonts.primary};
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.4;
 
         @media (max-width: 700px) {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
         }
     }
 
