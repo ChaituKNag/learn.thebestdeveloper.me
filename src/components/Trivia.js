@@ -10,7 +10,7 @@ const randomIndex = (curr, maxIndex) => {
 }
 
 const Trivia = ({ data }) => {
-  const [current, setCurrent] = useState()
+  const [current, setCurrent] = useState(null)
   useEffect(() => {
     if (data) {
       setCurrent(c => randomIndex(c, data.length))
@@ -30,7 +30,7 @@ const Trivia = ({ data }) => {
           />
         ) : null
       })}
-      {data.length > 1 ? (
+      {data.length > 1 && current !== null ? (
         <Button onClick={handleRandomTrivia}>Random Trivia</Button>
       ) : null}
     </div>
