@@ -10,3 +10,14 @@ topic: JavaScript
 4. For non primitive values like `objects` and `arrays`, their references cannot be changed, but still they can be mutated.
 
 The last point has always been tricky for new comers to JavaScript.
+
+```javascript
+const x = 10;
+x = 20; // fails
+
+const user = {
+  x: 10
+};
+
+user.x = 20; // works
+```
