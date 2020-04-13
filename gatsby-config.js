@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Learn | TheBestDeveloper.me`,
+    title: `Learn with Naga`,
     description: `This web-site can be used by anyone who wish to have a fun way of learning technical trivia like me!`,
     author: `@ChaituKNag`,
   },
@@ -29,10 +29,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0f2c4b`,
+        theme_color: `#0f2c4b`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/learnwithnaga.png`,
       },
     },
     `gatsby-plugin-styled-components`,

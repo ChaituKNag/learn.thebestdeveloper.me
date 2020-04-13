@@ -26,7 +26,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Trivia" />
       <Trivia data={data.allMarkdownRemark.edges} />
     </Layout>
   )
