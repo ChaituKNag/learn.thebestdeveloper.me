@@ -6,9 +6,10 @@ import randomLink from "../utils/random-link"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query AllTriviaIds {
-      allMarkdownRemark {
+      allFile(filter: { ext: { eq: ".md" } }) {
         edges {
           node {
+            name
             id
           }
         }
@@ -17,9 +18,9 @@ const IndexPage = () => {
   `)
 
   useEffect(() => {
-    if (data.allMarkdownRemark.edges) {
-      let { node } = randomLink(data.allMarkdownRemark.edges)
-      navigate(`/${node.id}`, { replace: true })
+    if (data.allFile.edges) {
+      let { node } = randomLink(data.allFile.edges)
+      navigate(`/${node.name}`, { replace: true })
     }
   }, [data])
   return <Layout>Loading...</Layout>

@@ -5,16 +5,17 @@ import Layout from "./layout"
 import randomLink from "../utils/random-link"
 import SEO from "./seo"
 
-const Trivia = ({ data }) => {
+const Trivia = ({ data, pageContext }) => {
   const trivia = data.markdownRemark
+
   const handleRandomTrivia = () => {
-    if (data.allMarkdownRemark.edges) {
-      let nodes = data.allMarkdownRemark.edges
+    if (data.allFile.edges) {
+      let nodes = data.allFile.edges
       let { node } = randomLink(
         nodes,
-        nodes.findIndex(t => t.node.id === trivia.id)
+        nodes.findIndex(t => t.node.name === pageContext.name)
       )
-      navigate(`/${node.id}`)
+      navigate(`/${node.name}`)
     }
   }
   return (
@@ -30,8 +31,8 @@ const Trivia = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query SingleTrivia($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query SingleTrivia($nameRegex: String!) {
+    markdownRemark(fileAbsolutePath: { regex: $nameRegex }) {
       frontmatter {
         topic
         title
@@ -40,9 +41,10 @@ export const pageQuery = graphql`
       id
       fileAbsolutePath
     }
-    allMarkdownRemark {
+    allFile(filter: { ext: { eq: ".md" } }) {
       edges {
         node {
+          name
           id
         }
       }

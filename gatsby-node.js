@@ -5,15 +5,11 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(
     `
-      query AllTrivia {
-        allMarkdownRemark {
+      query AllTriviaIds {
+        allFile(filter: { ext: { eq: ".md" } }) {
           edges {
             node {
-              frontmatter {
-                topic
-                title
-              }
-              html
+              name
               id
             }
           }
@@ -24,12 +20,13 @@ exports.createPages = ({ graphql, actions }) => {
   ).then(result => {
     if (result.errors) throw result.errors
 
-    result.data.allMarkdownRemark.edges.forEach(edge => {
+    result.data.allFile.edges.forEach(edge => {
       createPage({
-        path: `/${edge.node.id}`,
+        path: `/${edge.node.name}`,
         component: triviaPostTemplate,
         context: {
-          id: edge.node.id,
+          name: edge.node.name,
+          nameRegex: `/.*${edge.node.name}.*/`,
         },
       })
     })

@@ -4,6 +4,6 @@ export default (links, currIdx) => {
   while (newIdx === null || newIdx === currIdx) {
     newIdx = Math.floor(Math.random() * Math.floor(maxIdx))
   }
-
+  console.log(currIdx, newIdx)
   return links[newIdx]
 }
