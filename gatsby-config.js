@@ -57,7 +57,7 @@ module.exports = {
             variants: [`400`, `700`],
           },
           {
-            family: `Ubuntu Condensed`,
+            family: `Gotu`,
             variants: [`400`],
           },
         ],

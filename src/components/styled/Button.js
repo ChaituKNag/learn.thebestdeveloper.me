@@ -10,4 +10,12 @@ export default styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   font-family: ${fonts.secondary};
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+
+  &:hover {
+    opacity: 0.9;
+  }
 `
