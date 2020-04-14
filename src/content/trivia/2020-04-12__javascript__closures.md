@@ -1,5 +1,5 @@
 ---
-title: Closures
+title: JavaScript - Closures
 topic: JavaScript
 ---
 ## JavaScript - Closures
