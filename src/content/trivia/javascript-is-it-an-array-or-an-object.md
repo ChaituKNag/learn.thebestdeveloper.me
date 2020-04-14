@@ -8,7 +8,7 @@ In pre-es6 days, there was no straight forward way of determining if a variable 
 
 Because:
 
-```
+```javascript
 const arr = [1, 2, 3];
 console.log(typeof arr); // object
 
@@ -22,7 +22,7 @@ We use the below code where we use the Object prototype and the built-in \`call\
 
 ### Solution:
 
-```
+```javascript
 const arr = [1, 2, 3];
 console.log(Object.prototype.toString.call(arr)); // [object Array]
 
@@ -34,7 +34,7 @@ console.log(Object.prototype.toString.call(obj)); // [object Object]
 
 We use \`Array.isArray()\` method to validate quickly.
 
-```
+```javascript
 const arr = [1, 2, 3];
 console.log(Array.isArray(arr)); // true
 
