@@ -1,5 +1,5 @@
 ---
-title: Is it an Array or an Object
+title: JavaScript - Is it an Array or an Object
 topic: JavaScript
 ---
 ## JavaScript - Array vs Object type checking
