@@ -1,6 +1,6 @@
 ---
-title: Post vs put vs patch
-topic: Http
+title: HTTP - Post vs put vs patch
+topic: HTTP
 ---
 ## Post vs Put vs Patch
 
