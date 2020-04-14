@@ -10,14 +10,16 @@ This is from MDN:
 
 ```javascript
 function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
-  function displayName() { // displayName() is the inner function, a closure
-    alert(name); // use variable declared in the parent function
+  // name is a local variable created by init
+  var name = 'Mozilla'; 
+  // displayName() is the inner function, a closure
+  function displayName() { 
+    // use variable declared in the parent function
+    alert(name); 
   }
   displayName();
 }
 init();
-
 ```
 
 ### Practical use-cases

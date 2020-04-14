@@ -10,10 +10,12 @@ Because:
 
 ```javascript
 const arr = [1, 2, 3];
-console.log(typeof arr); // object
+console.log(typeof arr); 
+// Output: object
 
 const obj = { a: 10, b: 20 };
-console.log(typeof obj); // object
+console.log(typeof obj); 
+// Output: object
 ```
 
 So how did we check?
@@ -24,10 +26,12 @@ We use the below code where we use the Object prototype and the built-in \`call\
 
 ```javascript
 const arr = [1, 2, 3];
-console.log(Object.prototype.toString.call(arr)); // [object Array]
+console.log(Object.prototype.toString.call(arr)); 
+// Output: [object Array]
 
 const obj = { a: 10, b: 20 };
-console.log(Object.prototype.toString.call(obj)); // [object Object]
+console.log(Object.prototype.toString.call(obj)); 
+// Output: [object Object]
 ```
 
 ### ES6 way:
@@ -36,8 +40,10 @@ We use \`Array.isArray()\` method to validate quickly.
 
 ```javascript
 const arr = [1, 2, 3];
-console.log(Array.isArray(arr)); // true
+console.log(Array.isArray(arr)); 
+// Output: true
 
 const obj = { a: 10, b: 20 }; 
-console.log(Array.isArray(obj)); // false
+console.log(Array.isArray(obj)); 
+// Output: false
 ```
