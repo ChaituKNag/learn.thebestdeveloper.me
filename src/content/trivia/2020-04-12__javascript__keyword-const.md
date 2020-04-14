@@ -1,5 +1,5 @@
 ---
-title: Keyword const
+title: JavaScript - const keyword
 topic: JavaScript
 ---
 ## JavaScript - `const` keyword
