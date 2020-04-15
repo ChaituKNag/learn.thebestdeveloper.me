@@ -20,9 +20,7 @@ const Trivia = ({ data, pageContext }) => {
   }
   return (
     <Layout>
-      <SEO
-        title={`${trivia.frontmatter.topic} - ${trivia.frontmatter.title}`}
-      />
+      <SEO title={trivia.frontmatter.title} />
       <div key={trivia.id} dangerouslySetInnerHTML={{ __html: trivia.html }} />
 
       <Button onClick={handleRandomTrivia}>Random Trivia</Button>
