@@ -6,23 +6,17 @@ topic: JavaScript
 
 In pre-es6 days, there was no straight forward way of determining if a variable contains an array or an object.
 
-Because:
-
-```javascript
-const arr = [1, 2, 3];
-console.log(typeof arr); 
-// Output: object
-
-const obj = { a: 10, b: 20 };
-console.log(typeof obj); 
-// Output: object
-```
+Because `typeof arr` always gives you `object` even though `arr` contains an array.
 
 So how did we check?
 
-We use the below code where we use the Object prototype and the built-in \`call\` method.
+> Well this is kind of a *hack*, but we need to use the combination of the `Object`'s prototype method called `toString` and `Function`'s prototype method called `call`.
+
+
 
 ### Solution:
+
+As seen below, when you do `Object.prototype.toString.call` on an array, it gives exactly this string: `[object Array]`. Whereas if you do it on an object, it gives this string: `[object Object]`. **Always!**
 
 ```javascript
 const arr = [1, 2, 3];
@@ -36,7 +30,7 @@ console.log(Object.prototype.toString.call(obj));
 
 ### ES6 way:
 
-We use \`Array.isArray()\` method to validate quickly.
+Luckily, the [TC39](https://tc39.es/ecma262/#sec-array.isarray) folks found this hack to be cumbersome and adopted a static method on `Array` called `Array.isArray` to find out a given value is indeed an array or not.
 
 ```javascript
 const arr = [1, 2, 3];
