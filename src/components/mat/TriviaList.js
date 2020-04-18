@@ -6,9 +6,9 @@ import DialogContent from "@material-ui/core/DialogContent"
 import DialogTitle from "@material-ui/core/DialogTitle"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import { useTheme, makeStyles } from "@material-ui/core/styles"
-import { List, ListItem, ListItemText } from "@material-ui/core"
+import { List, ListItem, ListItemText, Typography } from "@material-ui/core"
 import { navigate } from "gatsby"
-import { lightTheme } from "../../themes"
+import { lightTheme, fonts } from "../../themes"
 
 const useStyles = makeStyles(theme => ({
   listItem: {
@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       backgroundColor: lightTheme.linkBg,
     },
+  },
+  listHeading: {
+    fontFamily: fonts.secondary,
   },
 }))
 
@@ -41,7 +44,15 @@ const TriviaList = ({ open, closeDialog, trivia }) => {
         onClose={handleClose}
         aria-labelledby="trivia-list-title"
       >
-        <DialogTitle id="trivia-list-title">Trivia list</DialogTitle>
+        <DialogTitle id="trivia-list-title">
+          <Typography
+            variant="h5"
+            component="h2"
+            className={classes.listHeading}
+          >
+            Trivia list
+          </Typography>
+        </DialogTitle>
         <DialogContent dividers>
           <List>
             {trivia &&
