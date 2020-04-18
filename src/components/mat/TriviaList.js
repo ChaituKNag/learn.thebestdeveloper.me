@@ -29,6 +29,7 @@ const TriviaList = ({ open, closeDialog, trivia }) => {
   }
 
   const handleTriviaSelect = url => () => {
+    closeDialog()
     navigate(url)
   }
 
