@@ -50,13 +50,19 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     code[class*="language-"], pre[class*="language-"] {
-      font-size: 1rem;
+      font-size: .9rem;
     }
 
     blockquote {
-      border-left: 5px solid ${({ theme }) => theme.bgDark};
-      padding-left: .8rem;
+      border: 1px solid ${({ theme }) => theme.bgDark};
+      box-shadow: 0px 0px 10px -3px ${({ theme }) => theme.boxShadow};
+      padding: 0 .8rem;
       margin-left: .8rem;
+      margin-right: .8rem;
+    }
+    
+    pre {
+      border: 1px solid ${({ theme }) => theme.borderColor};
     }
 `
 
@@ -68,6 +74,7 @@ export const lightTheme = {
   bgDark: "#0f2c4b",
   borderColor: "#76b4f7",
   linkBg: "#ffd3e8",
+  boxShadow: "#31393c22",
 }
 
 export const darkTheme = {
@@ -76,4 +83,5 @@ export const darkTheme = {
   textLight: "#ffd3e8",
   bgDark: "#0f2c4b",
   linkBg: "#12130f",
+  boxShadow: "#ffd3e822",
 }
