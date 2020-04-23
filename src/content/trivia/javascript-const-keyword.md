@@ -9,7 +9,7 @@ topic: JavaScript
 3. So, all primitive values created using `const` can never be replaced by another value.
 4. For non primitive values like `objects` and `arrays`, their references cannot be changed, but still they can be mutated.
 
-The last point has always been tricky for new comers to JavaScript.
+This 4th point has always been tricky for new comers to JavaScript.
 
 ```javascript
 const x = 10;
