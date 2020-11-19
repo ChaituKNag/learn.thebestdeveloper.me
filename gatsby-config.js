@@ -57,18 +57,20 @@ module.exports = {
         },
         `gatsby-plugin-styled-components`,
         {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-plugin-webfonts`,
             options: {
-                fonts: [
-                    {
-                        family: `Crimson Text`,
-                        variants: [`700i`, `700`],
-                    },
-                    {
-                        family: `Tenor Sans`,
-                        variants: [`400`],
-                    },
-                ],
+                fonts: {
+                    google: [
+                        {
+                            family: `Crimson Text`,
+                            variants: [`700i`, `700`],
+                        },
+                        {
+                            family: `Tenor Sans`,
+                            variants: [`400`],
+                        },
+                    ]
+                },
             },
         },
         `gatsby-plugin-offline`,

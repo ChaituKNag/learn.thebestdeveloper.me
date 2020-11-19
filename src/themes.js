@@ -33,7 +33,12 @@ export const GlobalStyle = createGlobalStyle`
       font-family: ${fonts.secondary}, serif;
       color: ${({ theme }) => theme.textLight};
       font-weight: 700;
+      font-style: italic;
       line-height: 110%;
+
+      code[class*="language-"] {
+          font-size: .6em;
+      }
     }
 
     h1 {
