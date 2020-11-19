@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 
 export const fonts = {
-  primary: "Gotu",
-  secondary: "Source Serif Pro",
+    primary: "'Tenor Sans'",
+    secondary: "'Crimson Text'",
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -10,9 +10,8 @@ export const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         background-color: ${({ theme }) => theme.bg};
         color: ${({ theme }) => theme.text};
-        font-family: 
-        ${fonts.primary};
-        font-size: 1.1rem;
+        font-family: ${fonts.primary}, sans-serif;
+        font-size: 20px;
         font-weight: 400;
         line-height: 1.4;
 
@@ -31,9 +30,22 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6, h7 {
-      font-family: ${fonts.secondary};
+      font-family: ${fonts.secondary}, serif;
       color: ${({ theme }) => theme.textLight};
-      font-weight: 400;
+      font-weight: 700;
+      line-height: 110%;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 
     a {
@@ -68,20 +80,20 @@ export const GlobalStyle = createGlobalStyle`
 
 // https://coolors.co/fbfcff-0f2c4b-12130f-31393c-ffd3e8
 export const lightTheme = {
-  bg: "#fbfcff",
-  text: "#12130f",
-  textLight: "#31393c",
-  bgDark: "#0f2c4b",
-  borderColor: "#76b4f7",
-  linkBg: "#ffd3e8",
-  boxShadow: "#31393c22",
+    bg: "#fbfcff",
+    text: "#12130f",
+    textLight: "#31393c",
+    bgDark: "#0f2c4b",
+    borderColor: "#76b4f7",
+    linkBg: "#ffd3e8",
+    boxShadow: "#31393c22",
 }
 
 export const darkTheme = {
-  bg: "#31393c",
-  text: "#fbfcff",
-  textLight: "#ffd3e8",
-  bgDark: "#0f2c4b",
-  linkBg: "#12130f",
-  boxShadow: "#ffd3e822",
+    bg: "#31393c",
+    text: "#fbfcff",
+    textLight: "#ffd3e8",
+    bgDark: "#0f2c4b",
+    linkBg: "#12130f",
+    boxShadow: "#ffd3e822",
 }
